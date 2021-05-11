@@ -1,140 +1,219 @@
 <!DOCTYPE html>
+
 <head>
-    <title>Pizzacalculator</title>
-    <link rel="stylesheet" href="style.css"></link>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>Pizzacalculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            Small
-          </div>
-          <div class="col-sm">
-            Toppings
-            <div class="form-group">
-                <label for="exampleFormControlSelect1"></label>
-                <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-                <option></option>
-                <option></option>
-                <option></option>
-                </select>
-            </div>
-          </div>
-          <div class="col-sm">
-            Extra
-          </div>
-          <div class="col-sm">
-            Amount
-          </div>
+  <div class="container">
+    <div class="row">
+      <!--Choose what size you want-->
+      <div class="col-s,">
+        size
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option id="small">small</option>
+            <option id="medium">medium</option>
+            <option id="large">large</option>
+          </select>
         </div>
-        <div class="row">
-            <div class="col-sm">
-              Medium
-            </div>
-            <div class="col-sm">
-                Toppings
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1"></label>
-                    <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-sm">
-                Extra            </div>
-            <div class="col-sm">
-              Amount
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm">
-              Large
-            </div>
-            <div class="col-sm">
-                Toppings
-                <div class="form-group">
-                    <label for="exampleFormControlSelect1"></label>
-                    <select class="form-control form-control-sm" id="exampleFormControlSelect1">
-                    <option></option>
-                    <option></option>
-                    <option></option>
-                    </select>
-                </div>
-            </div>
-            <div class="col-sm">
-                Extra            </div>
-            <div class="col-sm">
-              Amount
-            </div>
-          </div>
+        <button id="test">test</button>
       </div>
- 
+
+      <!--Choose what type of pizza you want-->
+      <div class="col-sm">
+        pizza
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option id="Napoletana">Napoletana</option>
+            <option id="Margherita">Margherita</option>
+            <option id="Quattro-Formaggi">Quattro Formaggi</option>
+            <option id="Funghi">Funghi</option>
+            <option id="Calzone">Calzone</option>
+          </select>
+        </div>
+        <button id="test2">test2</button>
+      </div>
+
+      <!--Choose what toppings you want-->
+      <div class="col-sm">
+        Toppings
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option id="nothing">No extra toppings</option>
+            <option id="bacon">Bacon</option>
+            <option id="black-olives">Black olives</option>
+            <option id="capers">Capers</option>
+            <option id="anchovies">Anchovies</option>
+            <option id="capsicum">Capsicum</option>
+          </select>
+        </div>
+        <button id="test3">test3</button>
+      </div>
+
+      <!--Choose how many you want-->
+      <div class="col-sm">
+        Amount
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <button id="test4">test4</button>
+      </div>
+
+      <!--Choose what extra service you want-->
+      <div class="col-sm">
+        Extra
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="card">
+          <label class="form-check-label" for="defaultCheck1">
+            Pay by card
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="sliced">
+          <label class="form-check-label" for="defaultCheck2">
+            Sliced
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="home">
+          <label class="form-check-label" for="defaultCheck3">
+            Home delivery
+          </label>
+        </div>
+        <button id="test5">test5</button>
+      </div>
+
+      
+    </div>
+
+
+    <!-- <div class="row">
+      <div class="col-sm">
+        Medium
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>Nothing</option>
+            <option>Napoletana</option>
+            <option>Margherita</option>
+            <option>Quattro Formaggi</option>
+            <option>Funghi</option>
+            <option>Calzone</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm">
+        Toppings
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>No extra toppings</option>
+            <option>bacon</option>
+            <option>Black olives</option>
+            <option>Capers</option>
+            <option>anchovies</option>
+            <option>capsicum</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm">
+        Extra
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>Nothing</option>
+            <option>Pay by card</option>
+            <option>Sliced</option>
+            <option>Home delivery</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm">
+        Amount
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="row">
+      <div class="col-sm">
+        Large
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>Nothing</option>
+            <option>Napoletana</option>
+            <option>Margherita</option>
+            <option>Quattro Formaggi</option>
+            <option>Funghi</option>
+            <option>Calzone</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm">
+        Toppings
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>No extra toppings</option>
+            <option>bacon</option>
+            <option>Black olives</option>
+            <option>Capers</option>
+            <option>anchovies</option>
+            <option>capsicum</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm">
+        Extra
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>Nothing</option>
+            <option>Pay by card</option>
+            <option>Sliced</option>
+            <option>Home delivery</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm">
+        Amount
+        <div class="form-group">
+          <label for="exampleFormControlSelect1"></label>
+          <select class="form-control form-control-sm">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
 </body>
+  <script src="script.js"></script>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <form>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Pizza size</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Choose toppings</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlSelect1">Choose toppings</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            </select>
-        </div>
-    </form> -->
