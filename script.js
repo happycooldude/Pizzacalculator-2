@@ -1,10 +1,11 @@
-const smPrice = 3;
+const sPrice = 3;
 const mPrice = 5;
 const lPrice = 7;
 const toppingprice = 2;
 
 const types = ["Napoletana", "Margherita", "Quattro-Formaggi", "Funghi", "Calzone"];
 const toppings = ["No extra toppings", "Bacon", "Black olives", "Capers", "Anchovies", "Capsicum"]
+const toppingPrices = [0, 3, 2, 2, 3, 2.5,]
 const amount = ["1","2","3","4","5"]
 const extra = ["card","sliced","home"]
 
@@ -56,17 +57,7 @@ function getToppings(){
 }
 
 function getAmmount(){
-    if (document.getElementById("1").selected){
-        console.log(amount[0]);
-    }else if(document.getElementById("2").selected){
-        console.log(amount[1]);
-    }else if(document.getElementById("3").selected){
-        console.log(amount[2]);
-    }else if(document.getElementById("4").selected){
-        console.log(amount[3]);
-    }else if(document.getElementById("5").selected){
-        console.log(amount[4]);
-    }
+    console.log(document.getElementById("amount").value)
 }
 
 function getExtra(){
@@ -77,4 +68,8 @@ function getExtra(){
     }if(document.getElementById("home").checked){
         console.log("home is checked")
     }
+}
+
+function calculate(){
+    
 }
