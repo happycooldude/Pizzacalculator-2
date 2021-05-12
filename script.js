@@ -14,6 +14,7 @@ document.getElementById("test2").onclick = getType;
 document.getElementById("test3").onclick = getToppings;
 document.getElementById("test4").onclick = getAmmount;
 document.getElementById("test5").onclick = getExtra;
+document.getElementById("calculate").onclick = calculate;
 
 function getSize(){
    if (document.getElementById("small").selected) {
@@ -70,6 +71,7 @@ function getExtra(){
     }
 }
 
+//calculate the final price with the given inputs
 function calculate(){
     
 }

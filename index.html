@@ -46,14 +46,14 @@
         Toppings
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select class="form-control form-control-sm">
-            <option id="nothing">No extra toppings</option>
-            <option id="bacon">Bacon</option>
-            <option id="black-olives">Black olives</option>
-            <option id="capers">Capers</option>
-            <option id="anchovies">Anchovies</option>
-            <option id="capsicum">Capsicum</option>
-          </select>
+            <select class="form-control form-control-sm">
+              <option id="nothing">No extra toppings</option>
+              <option id="bacon">Bacon</option>
+              <option id="black-olives">Black olives</option>
+              <option id="capers">Capers</option>
+              <option id="anchovies">Anchovies</option>
+              <option id="capsicum">Capsicum</option>
+            </select>
         </div>
         <button id="test3">test3</button>
       </div>
@@ -61,7 +61,9 @@
       <!--Choose how many you want-->
       <div class="col-sm">
         Amount
-        <input type="number" class="form-control mt-3" id="amount" value="1">
+        <div class="form-group">
+          <input type="number" class="form-control form-control-sm mt-4" id="amount" value="1">
+        </div>        
         <button id="test4">test4</button>
       </div>
 
@@ -71,7 +73,7 @@
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="card">
           <label class="form-check-label" for="defaultCheck1">
-            Pay by card 10% korting
+            Pay by card -10%
           </label>
         </div>
         <div class="form-check">
@@ -91,6 +93,7 @@
 
       <!--Div with the claculations and bill-->
     </div>
+    <button id="calculate">calculate</button>
     <div id="bill" class="d-l-flex mt-5 bg bg-dark" style="height: 100px">I'm a flexbox container!</div>
   </div>
 
