@@ -2,23 +2,18 @@ const sPrice = 3;
 const mPrice = 5;
 const lPrice = 7;
 const toppingprice = 2;
+const toppingPrices = [0, 3, 2, 2, 3, 2.5,]
 
 const types = ["Napoletana", "Margherita", "Quattro-Formaggi", "Funghi", "Calzone"];
 const toppings = ["No extra toppings", "Bacon", "Black olives", "Capers", "Anchovies", "Capsicum"]
-const toppingPrices = [0, 3, 2, 2, 3, 2.5,]
 const amount = ["1","2","3","4","5"]
 const extra = ["card","sliced","home"]
 
-document.getElementById("test").onclick = getSize;
-document.getElementById("test2").onclick = getType;
-document.getElementById("test3").onclick = getToppings;
-document.getElementById("test4").onclick = getAmmount;
-document.getElementById("test5").onclick = getExtra;
 document.getElementById("calculate").onclick = calculate;
 
 function getSize(){
    if (document.getElementById("small").selected) {
-       console.log(smPrice);
+       console.log(sPrice);
    }else if(document.getElementById("medium").selected){
        console.log(mPrice);
    }else if(document.getElementById("large").selected){
@@ -73,5 +68,5 @@ function getExtra(){
 
 //calculate the final price with the given inputs
 function calculate(){
-    
+    console.log(getSize(), getType(), getToppings(), getAmmount(), getExtra());
 }
