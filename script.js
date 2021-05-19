@@ -77,5 +77,6 @@ function getExtra(){
 
 //calculate the final price with the given inputs
 function calculate(){
-    document.write(getSize(), getType(), getToppings(), getAmmount(), getExtra());
+    getSize(), getType(), getToppings(), getAmmount(), getExtra()
+    
 }
