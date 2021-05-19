@@ -1,20 +1,29 @@
-const sPrice = 3;
-const mPrice = 5;
-const lPrice = 7;
-const toppingprice = 2;
-const toppingPrices = [0, 3, 2, 2, 3, 2.5,]
+const mPrice = 3;
+const lPrice = 5;
 
-const types = ["Napoletana", "Margherita", "Quattro-Formaggi", "Funghi", "Calzone"];
-const toppings = ["No extra toppings", "Bacon", "Black olives", "Capers", "Anchovies", "Capsicum"]
-const amount = ["1","2","3","4","5"]
+const types = [
+    {type: "Napoletana", price: 3},
+    {type: "Margherita", price: 2},
+    {type: "Quattro-Formaggi", price: 2},
+    {type: "Funghi", price: 3},
+    {type: "Calzone", price: 3}
+];
+
+const toppings = [
+    {top: "No extra toppings", price: 0},
+    {top: "Bacon", price: 3},
+    {top: "Black olives", price: 2},
+    {top: "Capers", price: 2},
+    {top: "Anchovies", price: 3},
+    {top: "Capsicum", price: 2.5}
+];
+
 const extra = ["card","sliced","home"]
 
 document.getElementById("calculate").onclick = calculate;
 
 function getSize(){
-   if (document.getElementById("small").selected) {
-       console.log(sPrice);
-   }else if(document.getElementById("medium").selected){
+   if(document.getElementById("medium").selected){
        console.log(mPrice);
    }else if(document.getElementById("large").selected){
        console.log(lPrice);
@@ -23,32 +32,32 @@ function getSize(){
 
 function getType(){
     if (document.getElementById("Napoletana").selected) {
-        console.log(types[0])
+        console.log(types[0].price)
     }else if(document.getElementById("Margherita").selected){
-        console.log(types[1]);
+        console.log(types[1].price);
     }else if(document.getElementById("Quattro-Formaggi").selected){
-        console.log(types[2]);
+        console.log(types[2].price);
     }else if(document.getElementById("Funghi").selected){
-        console.log(types[3]);
+        console.log(types[3].price);
     }else if(document.getElementById("Calzone").selected){
-        console.log(types[4]);
+        console.log(types[4].price);
     }
     
 }
 
 function getToppings(){
     if (document.getElementById("nothing").selected) {
-        console.log(toppings[0]);
+        console.log(toppings[0].price);
     }else if(document.getElementById("bacon").selected){
-        console.log(toppings[1]);
+        console.log(toppings[1].price);
     }else if(document.getElementById("black-olives").selected){
-        console.log(toppings[2]);
+        console.log(toppings[2].price);
     }else if(document.getElementById("capers").selected){
-        console.log(toppings[3]);
+        console.log(toppings[3].price);
     }else if(document.getElementById("anchovies").selected){
-        console.log(toppings[4]);
+        console.log(toppings[4].price);
     }else if(document.getElementById("capsicum").selected){
-        console.log(toppings[5]);
+        console.log(toppings[5].price);
     }
 }
 
@@ -68,5 +77,5 @@ function getExtra(){
 
 //calculate the final price with the given inputs
 function calculate(){
-    console.log(getSize(), getType(), getToppings(), getAmmount(), getExtra());
+    document.write(getSize(), getType(), getToppings(), getAmmount(), getExtra());
 }
