@@ -16,10 +16,10 @@
         size
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select class="form-control form-control-sm">
-            <option id="small">small €0</option>
-            <option id="medium">medium €3</option>
-            <option id="large">large €5</option>
+          <select id="selectSize" class="form-control form-control-sm">
+            <option id="small" value="0">small €0</option>
+            <option id="medium" value="3">medium €3</option>
+            <option id="large" value="5">large €5</option>
           </select>
         </div>
       </div>
@@ -29,12 +29,12 @@
         pizza
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select class="form-control form-control-sm">
-            <option id="Napoletana">Napoletana €3</option>
-            <option id="Margherita">Margherita €2</option>
-            <option id="Quattro-Formaggi">Quattro Formaggi €2</option>
-            <option id="Funghi">Funghi €3</option>
-            <option id="Calzone">Calzone €3</option>
+          <select id="selectType" class="form-control form-control-sm">
+            <option id="Napoletana" value="3">Napoletana €3</option>
+            <option id="Margherita" value="2">Margherita €2</option>
+            <option id="Quattro-Formaggi" value="2">Quattro Formaggi €2</option>
+            <option id="Funghi" value="3">Funghi €3</option>
+            <option id="Calzone" value="3">Calzone €3</option>
           </select>
         </div>
       </div>
@@ -44,13 +44,13 @@
         Toppings
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-            <select class="form-control form-control-sm">
-              <option id="nothing">No extra toppings</option>
-              <option id="bacon">Bacon €3</option>
-              <option id="black-olives">Black olives €2</option>
-              <option id="capers">Capers €2</option>
-              <option id="anchovies">Anchovies €3</option>
-              <option id="capsicum">Capsicum €2</option>
+            <select id="selectTop" class="form-control form-control-sm">
+              <option id="nothing" value="0">No extra toppings</option>
+              <option id="bacon" value="3">Bacon €3</option>
+              <option id="black-olives" value="2">Black olives €2</option>
+              <option id="capers" value="2">Capers €2</option>
+              <option id="anchovies" value="3">Anchovies €3</option>
+              <option id="capsicum" value="2">Capsicum €2</option>
             </select>
         </div>
       </div>
@@ -67,19 +67,19 @@
       <div class="col-sm">
         Extra
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="card">
+          <input class="form-check-input" type="checkbox" id="card" value="10">
           <label class="form-check-label" for="defaultCheck1">
             Pay by card €-10%
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="sliced">
+          <input class="form-check-input" type="checkbox" id="sliced" value="3">
           <label class="form-check-label" for="defaultCheck2">
             Sliced €3
           </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="home">
+          <input class="form-check-input" type="checkbox" id="home" value="5">
           <label class="form-check-label" for="defaultCheck3">
             Home delivery €5
           </label>
@@ -89,7 +89,7 @@
       <!--Div with the claculations and bill-->
     </div>
     <button id="calculate">calculate</button>
-    <div id="bill" class="d-l-flex mt-5 bg bg-dark" style="height: 100px">I'm a flexbox container!</div>
+    <div id="bill" class="d-l-flex mt-5 bg bg-light" style="height: 100px"></div>
     <div id="image"></div>
   </div>
 
