@@ -1,29 +1,32 @@
 // const mPrice = 3;
 // const lPrice = 5;
 
-const types = [
-    {type: "Napoletana", price: 3},
-    {type: "Margherita", price: 2},
-    {type: "Quattro-Formaggi", price: 2},
-    {type: "Funghi", price: 3},
-    {type: "Calzone", price: 3}
-];
+// const types = [
+//     {type: "Napoletana", price: 3},
+//     {type: "Margherita", price: 2},
+//     {type: "Quattro-Formaggi", price: 2},
+//     {type: "Funghi", price: 3},
+//     {type: "Calzone", price: 3}
+// ];
 
-const toppings = [
-    {top: "No extra toppings", price: 0},
-    {top: "Bacon", price: 3},
-    {top: "Black olives", price: 2},
-    {top: "Capers", price: 2},
-    {top: "Anchovies", price: 3},
-    {top: "Capsicum", price: 2}
-];
+// const toppings = [
+//     {top: "No extra toppings", price: 0},
+//     {top: "Bacon", price: 3},
+//     {top: "Black olives", price: 2},
+//     {top: "Capers", price: 2},
+//     {top: "Anchovies", price: 3},
+//     {top: "Capsicum", price: 2}
+// ];
 
 const extra = ["card","sliced","home"]
 
 document.getElementById("calculate").onclick = calculate;
 
 function getSize(){
-    console.log('selectSize value: ' , document.getElementById('selectSize').value);
+    size = document.getElementById('selectSize').value;
+    console.log('selectSize value: ' , size);
+
+    return parseInt(size);
 
 //    if(document.getElementById("medium").selected){
 //        console.log(mPrice);
@@ -33,7 +36,10 @@ function getSize(){
 }
 
 function getType(){
-    console.log('selectType value: ' , document.getElementById('selectType').value);
+    type = document.getElementById('selectType').value;
+    console.log('selectType value: ' , type);
+
+    return parseInt(type);
 
     // if (document.getElementById("Napoletana").selected) {
     //     console.log(types[0].price)
@@ -49,7 +55,10 @@ function getType(){
 }
 
 function getToppings(){
-    console.log('selectTop value: ' , document.getElementById('selectTop').value);
+    topping = document.getElementById('selectTop').value;
+    console.log('selectTop value: ' , topping);
+
+    return parseInt(topping);
 
     // if (document.getElementById("nothing").selected) {
     //     console.log(toppings[0].price);
@@ -67,21 +76,40 @@ function getToppings(){
 }
 
 function getAmmount(){
-    console.log(document.getElementById("amount").value)
+    ammount = document.getElementById("amount").value;
+    console.log('selectAmmount value: ' , ammount);
+
+    return parseInt(ammount);
 }
 
 function getExtra(){
     if(document.getElementById("card").checked){
-        console.log('cardCheck value: ' , document.getElementById('card').value);
+        card = document.getElementById('card').value;
+        console.log('cardCheck value: ' , card);
+
+        return parseInt(card);
     }if(document.getElementById("sliced").checked){
-        console.log('sliceCheck value: ' , document.getElementById('sliced').value);
+        sliced = document.getElementById('sliced').value;
+        console.log('sliceCheck value: ' , sliced);
+
+        return parseInt(sliced);
     }if(document.getElementById("home").checked){
-        console.log('delivery value: ' , document.getElementById('home').value);
+        home = document.getElementById('home').value;
+        console.log('delivery value: ' , home);
+
+        return parseInt(home);
     }
 }
 
 //calculate the final price with the given inputs
 function calculate(){
-    document.getElementById("bill").innerHTML = eval(getSize(), getType(), getToppings(), getAmmount(), getExtra())
-    
+    size = getSize();
+    type = getType();
+    topping = getToppings();
+    ammount = getAmmount();
+    card = getExtra();
+    sliced = getExtra();
+    home = getExtra();
+
+    document.getElementById("bill").innerHTML = size + type + topping * ammount
 }
