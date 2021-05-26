@@ -33,25 +33,29 @@ function getAmmount(){
 }
 
 //krijg de waardes van de extra opties die je kunt selecteren
-function getExtra(){
+function getCard(){
     if(document.getElementById("card").checked){
         card = document.getElementById('card').value;
         console.log('cardCheck value: ' , card);
 
-        return parseInt(card);
-
-    }if(document.getElementById("sliced").checked){
+        return parseFloat(card);
+        }else{ return 1;}
+}   
+function getSliced(){       
+        if(document.getElementById("sliced").checked){
         sliced = document.getElementById('sliced').value;
         console.log('sliceCheck value: ' , sliced);
 
         return parseInt(sliced);
-
-    }if(document.getElementById("home").checked){
+        }else{return 0;} 
+}
+function getHome(){
+    if(document.getElementById("home").checked){
         home = document.getElementById('home').value;
         console.log('delivery value: ' , home);
 
         return parseInt(home);
-    }
+    }else{return 0;} 
 }
 
 //calculate the final price with the given inputs
@@ -60,9 +64,13 @@ function calculate(){
     type = getType();
     topping = getToppings();
     ammount = getAmmount();
-    // getExtra();
-    // getExtra();
-    // getExtra();
+    home = getHome();
+    sliced = getSliced();
+    card = getCard();
 
-    document.getElementById("bill").innerHTML =  (size + type + topping) * ammount;
+    total = (((size + type + topping) * ammount) + home + sliced) * card;
+
+
+
+    document.getElementById("bill").innerHTML = parseFloat(total); 
 }
