@@ -13,6 +13,13 @@ function getType(){
     type = document.getElementById('selectType').value;
     console.log('selectType value: ' , type);
 
+    if (document.getElementById("Napoletana").selected) {
+        document.getElementById("image").src = "images/napoletana.jpg"
+    } if (document.getElementById("Margherita").selected){
+        document.getElementById("image").src = "images/margherita.jpg"
+    }
+    
+
     return parseInt(type);
 }
 
@@ -72,5 +79,5 @@ function calculate(){
 
 
 
-    document.getElementById("bill").innerHTML = parseFloat(total); 
+    document.getElementById("bill").innerHTML = "De totaalprijs is €" + parseFloat(total); 
 }
