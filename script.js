@@ -17,6 +17,12 @@ function getType(){
         document.getElementById("image").src = "images/napoletana.jpg"
     } if (document.getElementById("Margherita").selected){
         document.getElementById("image").src = "images/margherita.jpg"
+    } if (document.getElementById("Quattro-Formaggi").selected){
+        document.getElementById("image").src = "images/quattro-formaggi.jpg"
+    } if (document.getElementById("Funghi").selected){
+        document.getElementById("image").src = "images/funghi.jpg"
+    } if (document.getElementById("Calzone").selected){
+        document.getElementById("image").src = "images/calzone.jpg"
     }
     
 
