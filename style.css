@@ -1,3 +1,19 @@
 body{
     background-color: grey;
 }
+
+#bill{
+    height: 25px; width: 200px; margin: 0 auto;
+}
+
+#image{
+    max-width: 100%; max-height: 100%;
+}
+
+#ingredient{
+    margin-left: 490px;
+}
+
+.hidden{
+    display: none;
+}

@@ -87,3 +87,8 @@ function calculate(){
 
     document.getElementById("bill").innerHTML = "De totaalprijs is €" + parseFloat(total); 
 }
+
+document.getElementById("ingredient").onclick = show
+function show(element) {
+    document.getElementById("ingredients").classList.remove("hidden");
+  }

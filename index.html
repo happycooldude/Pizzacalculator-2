@@ -44,14 +44,14 @@
         Toppings
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-            <select id="selectTop" class="form-control form-control-sm">
-              <option id="nothing" value="0">No extra toppings</option>
-              <option id="bacon" value="3">Bacon €3</option>
-              <option id="black-olives" value="2">Black olives €2</option>
-              <option id="capers" value="2">Capers €2</option>
-              <option id="anchovies" value="3">Anchovies €3</option>
-              <option id="capsicum" value="2">Capsicum €2</option>
-            </select>
+          <select id="selectTop" class="form-control form-control-sm">
+            <option id="nothing" value="0">No extra toppings</option>
+            <option id="bacon" value="3">Bacon €3</option>
+            <option id="black-olives" value="2">Black olives €2</option>
+            <option id="capers" value="2">Capers €2</option>
+            <option id="anchovies" value="3">Anchovies €3</option>
+            <option id="capsicum" value="2">Capsicum €2</option>
+          </select>
         </div>
       </div>
 
@@ -60,7 +60,7 @@
         Amount
         <div class="form-group">
           <input type="number" min="1" class="form-control form-control-sm mt-4" id="amount" value="1">
-        </div>        
+        </div>
       </div>
 
       <!--Choose what extra service you want-->
@@ -86,17 +86,23 @@
         </div>
       </div>
 
-      <!--Div with the claculations and bill-->
+      <!--Div with the image and bill-->
     </div>
     <button id="calculate" style="margin-left: 525px;">prijs</button>
-    <div id="bill" class="d-l-flex mt-3 bg bg-light" style="height: 25px; width: 200px; margin: 0 auto;">
+    <div id="bill" class="d-l-flex mt-3 bg bg-light">
     </div>
 
     <div class="mt-3" style="height: 400px; width: 400px; margin: 0 auto;">
-        <img id="image" style="max-width: 100%; max-height: 100%;" src="images/napoletana.jpg">
+      <img id="image" src="images/napoletana.jpg">
+    </div>
+
+    <div>
+        <button id="ingredient">show ingredients</button>
+        <div id="ingredients" class="hidden bg-light">test ingredients</div>
     </div>
   </div>
 
 </body>
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
 </html>
