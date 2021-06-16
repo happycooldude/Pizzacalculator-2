@@ -2,8 +2,25 @@ body{
     background-color: grey;
 }
 
+#selectTop{
+    text-align: center;
+}
+
+#selectType{
+    text-align: center;
+}
+
+#selectSize{
+    text-align: center;
+}
+
+#amount{
+    text-align: center;
+}
+
 #bill{
     height: 25px; width: 200px; margin: 0 auto;
+    text-align: center;
 }
 
 #image{
@@ -12,6 +29,36 @@ body{
 
 #ingredient{
     margin-left: 490px;
+}
+
+#ingredients{
+    text-align: center;
+}
+
+#sort{
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#logoimg{
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    top: 200px;
+    right: 150px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#sortBTN{
+    position: absolute;
+    top: 160px;
+    left: 220px;
 }
 
 .hidden{

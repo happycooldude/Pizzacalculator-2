@@ -29,7 +29,7 @@
         pizza
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select id="selectType" onchange="getType()" class="form-control form-control-sm">
+          <select id="selectType" onchange="getType(); sort();" class="form-control form-control-sm">
             <option id="Napoletana" value="3">Napoletana €3</option>
             <option id="Margherita" value="2">Margherita €2</option>
             <option id="Quattro-Formaggi" value="2">Quattro Formaggi €2</option>
@@ -101,6 +101,11 @@
         <div id="ingredients" class="hidden bg-light mt-2"></div>
     </div>
   </div>
+
+  <button id="sortBTN">Aanbevolen toppings</button>
+  <div id="sort" class="hidden bg-light"><h4>Aanbevolen toppings</h4><h5 id="reccomendation"></h5></div>
+
+  <div id="logo"><img id="logoimg" src="images/pizza-chef.jpg"></div>
 
 </body>
 <script src="script.js"></script>
