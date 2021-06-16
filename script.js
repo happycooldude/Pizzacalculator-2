@@ -25,7 +25,6 @@ function getType(){
         document.getElementById("image").src = "images/calzone.jpg"
     }
     
-
     return parseInt(type);
 }
 
@@ -54,6 +53,7 @@ function getCard(){
         return parseFloat(card);
         }else{ return 1;}
 }   
+
 function getSliced(){       
         if(document.getElementById("sliced").checked){
         sliced = document.getElementById('sliced').value;
@@ -62,6 +62,7 @@ function getSliced(){
         return parseInt(sliced);
         }else{return 0;} 
 }
+
 function getHome(){
     if(document.getElementById("home").checked){
         home = document.getElementById('home').value;
@@ -91,4 +92,15 @@ function calculate(){
 document.getElementById("ingredient").onclick = show
 function show(element) {
     document.getElementById("ingredients").classList.remove("hidden");
+    if (document.getElementById("Napoletana").selected) {
+        document.getElementById("ingredients").innerHTML = "ansjovis, zwarte olijven en kappertjes"
+    } if (document.getElementById("Margherita").selected){
+        document.getElementById("ingredients").innerHTML = "tomaat, mozzarella and verse basilicum."
+    } if (document.getElementById("Quattro-Formaggi").selected){
+        document.getElementById("ingredients").innerHTML = "Mozzarella, Gorgonzola, Fontina and Parmigiano."
+    } if (document.getElementById("Funghi").selected){
+        document.getElementById("ingredients").innerHTML = "tomaat, mozzarella, champignons en zwarte olijven"
+    } if (document.getElementById("Calzone").selected){
+        document.getElementById("ingredients").innerHTML = "met tomaat, mozzarella"
+    }
   }
