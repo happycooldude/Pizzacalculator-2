@@ -17,9 +17,9 @@
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
           <select id="selectSize" class="form-control form-control-sm">
-            <option id="small" value="0">small €0</option>
+            <option id="small" value="0">Klein €0</option>
             <option id="medium" value="3">medium €3</option>
-            <option id="large" value="5">large €5</option>
+            <option id="large" value="5">Groot €5</option>
           </select>
         </div>
       </div>
@@ -29,7 +29,7 @@
         pizza
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
-          <select id="selectType" class="form-control form-control-sm">
+          <select id="selectType" onchange="getType()" class="form-control form-control-sm">
             <option id="Napoletana" value="3">Napoletana €3</option>
             <option id="Margherita" value="2">Margherita €2</option>
             <option id="Quattro-Formaggi" value="2">Quattro Formaggi €2</option>
@@ -45,12 +45,12 @@
         <div class="form-group">
           <label for="exampleFormControlSelect1"></label>
           <select id="selectTop" class="form-control form-control-sm">
-            <option id="nothing" value="0">No extra toppings</option>
+            <option id="nothing" value="0">geen extra topping</option>
             <option id="bacon" value="3">Bacon €3</option>
-            <option id="black-olives" value="2">Black olives €2</option>
-            <option id="capers" value="2">Capers €2</option>
-            <option id="anchovies" value="3">Anchovies €3</option>
-            <option id="capsicum" value="2">Capsicum €2</option>
+            <option id="black-olives" value="2">Zwarte olijven €2</option>
+            <option id="capers" value="2">kappertjes €2</option>
+            <option id="anchovies" value="3">Ansjovis €3</option>
+            <option id="capsicum" value="2">paprika €2</option>
           </select>
         </div>
       </div>
