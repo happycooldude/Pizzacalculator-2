@@ -102,9 +102,9 @@ function calculate() {
   card = getCard();
 
   total = ((size + type + topping) * ammount + home + sliced) * card;
+  
 
-  document.getElementById("bill").innerHTML =
-    "De totaalprijs is €" + parseFloat(total);
+  document.getElementById("bill").innerHTML = "De totaalprijs is €" + Math.round((total + Number.EPSILON) * 100) / 100;
 }
 
 document.getElementById("sortBTN").onclick = showRec;
